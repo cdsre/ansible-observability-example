@@ -1,0 +1,15 @@
+---
+- name: Create a Directory
+  file:
+    path: "/tmp/mydirectory"
+    state: directory
+
+- name: Copy a File
+  copy:
+    src: "/etc/hosts"
+    dest: "/tmp/hosts_backup.txt"
+
+- name: Remove a Directory
+  file:
+    path: "/tmp/mydirectory"
+    state: absent

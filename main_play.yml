@@ -1,0 +1,21 @@
+---
+- name: Example Playbook with Diverse Tasks
+  hosts: localhost
+  pre_tasks:
+    - name: early debug from main_play
+      debug:
+        msg: "This is a debug message"
+
+  tasks:
+    - name: debug from main_play
+      debug:
+        msg: "This is a debug message"
+  roles:
+    - foo
+    - bar
+    - baz
+
+  post_tasks:
+    - name: late debug from main_play
+      debug:
+        msg: "This is a debug message"

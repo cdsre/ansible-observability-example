@@ -1,0 +1,13 @@
+---
+- name: Run a Command
+  command: "echo 'Hello, Ansible!' > /tmp/hello.txt"
+
+- name: Simulate Long Running Task
+  command: "sleep 15"
+  async: 60
+  poll: 0
+  register: long_running_task
+
+- name: Print Long Running Task Result
+  debug:
+    msg: "Long running task completed with result: {{ long_running_task }}"

@@ -1,0 +1,10 @@
+---
+- name: Download File
+  get_url:
+    url: "https://example.com"
+    dest: "/tmp/somefile.txt"
+
+- name: Install a Package
+  package:
+    name: htop
+    state: present
