@@ -16,6 +16,9 @@
     - baz
 
   post_tasks:
+    - name: oh no
+      command:
+        cmd: ls /foo/bar.txt
     - name: late debug from main_play
       debug:
         msg: "This is a debug message"
