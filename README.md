@@ -12,7 +12,7 @@ ansible and the OTEL packages needed to make this work.
 ### build docker and run the container
 ```shell
 docker build -t myansible .
-docker run -it -v $(pwd):/local -w /local webdevops/ansible sh
+docker run -it -v $(pwd):/local -w /local myansible sh
 ```
 
 ### setup the env vars
